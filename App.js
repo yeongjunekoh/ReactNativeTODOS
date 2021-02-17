@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  TextInput,
-  View,
-  Text,
-  ScrollView,
-} from 'react-native';
+import { SafeAreaView, StyleSheet, TextInput, View, Text, ScrollView } from 'react-native';
 
 const App = () => {
   return (
