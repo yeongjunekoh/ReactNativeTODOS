@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
     fontWeight: '300',
     textAlign: 'center',
     backgroundColor: '#3143e8',
-    borderWidth: 1,
   },
   card: {
     backgroundColor: '#fff',
