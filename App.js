@@ -8,6 +8,7 @@ import {
   ScrollView,
 } from 'react-native';
 import TodoInsert from './components/TodoInsert';
+import TodoList from './components/TodoList';
 
 const App = () => {
   return (
@@ -15,9 +16,7 @@ const App = () => {
       <Text style={styles.appTitle}>Hello Todolist</Text>
       <View style={styles.card}>
         <TodoInsert />
-        <ScrollView>
-          <Text>TodoList</Text>
-        </ScrollView>
+        <TodoList />
       </View>
     </SafeAreaView>
   );
