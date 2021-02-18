@@ -1,19 +1,13 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  TextInput,
-  View,
-  Text,
-  ScrollView,
-} from 'react-native';
+import {SafeAreaView, StyleSheet, View, Text, ScrollView} from 'react-native';
 import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
+import TodoListItem from './components/TodoListItem';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.appTitle}>Hello Todolist</Text>
+      <Text style={styles.appTitle}>Todolist</Text>
       <View style={styles.card}>
         <TodoInsert />
         <TodoList />
@@ -26,6 +20,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#3143e8',
+    flexDirection: 'column',
   },
   appTitle: {
     color: '#fff',
@@ -43,13 +38,13 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 10, // to provide rounded corners
     marginLeft: 10,
     marginRight: 10,
+    borderWidth: 1,
   },
-  input: {
-    padding: 20,
-    borderBottomColor: '#bbb',
-    borderBottomWidth: 1,
-    fontSize: 24,
-    marginLeft: 20,
+  listContainer: {
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    borderWidth: 1,
   },
 });
 
