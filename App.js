@@ -12,10 +12,10 @@ const App = () => {
       {id: Math.random().toString(), textValue: text, checked: false},
     ]);
   };
-  const onRemove = (id) => (e) => {
+  const onRemove = (id) => (event) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
-  const onToggle = (id) => (e) => {
+  const onToggle = (id) => (event) => {
     setTodos(
       todos.map((todo) =>
         todo.id === id ? {...todo, checked: !todo.checked} : todo,
