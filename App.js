@@ -4,20 +4,20 @@ import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
 
 const App = () => {
-  //  todos: {id: Number, textValue: string, checked: boolean }
-  const [todos, setTodos] = useState([]);
+  //  toDos: {id: Number, textValue: string, checked: boolean }
+  const [toDos, setToDos] = useState([]);
   const addTodo = (text) => {
-    setTodos([
-      ...todos,
+    setToDos([
+      ...toDos,
       {id: Math.random().toString(), textValue: text, checked: false},
     ]);
   };
   const onRemove = (id) => (event) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+    setToDos(toDos.filter((todo) => todo.id !== id));
   };
   const onToggle = (id) => (event) => {
-    setTodos(
-      todos.map((todo) =>
+    setToDos(
+      toDos.map((todo) =>
         todo.id === id ? {...todo, checked: !todo.checked} : todo,
       ),
     );
@@ -25,10 +25,10 @@ const App = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.appTitle}>Todolist</Text>
+      <Text style={styles.appTitle}>ToDoList</Text>
       <View style={styles.card}>
         <TodoInsert onAddTodo={addTodo} />
-        <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
+        <TodoList toDos={toDos} onRemove={onRemove} onToggle={onToggle} />
       </View>
     </SafeAreaView>
   );
